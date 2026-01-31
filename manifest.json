@@ -3,10 +3,13 @@
   "version": "1.1.6",
   "description": "",
   "permissions": [
-    "storage"
+    "storage",
+    "https://web.whatsapp.com/"
   ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": [
+      "background.js"
+    ]
   },
   "content_scripts": [
     {
@@ -19,21 +22,11 @@
       "run_at": "document_end"
     }
   ],
-  "host_permissions": [
-    "https://web.whatsapp.com/"
-  ],
-  "manifest_version": 3,
+  "manifest_version": 2,
   "web_accessible_resources": [
-    {
-      "resources": [
-        "packed.js"
-      ],
-      "matches": [
-        "https://web.whatsapp.com/*"
-      ]
-    }
+    "packed.js"
   ],
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html"
   },
   "icons": {

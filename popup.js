@@ -10,7 +10,7 @@ let active_settings = Object.fromEntries(Object.keys(settings_toggles).map(key =
 
 const on_toggle = async (event) => {
     active_settings[event.target.id] = event.target.checked;
-    chrome.storage.sync.set({settings: active_settings});
+    browser.storage.sync.set({ settings: active_settings });
 };
 
 const add_setting_toggle = (setting_key, title) => {
@@ -44,7 +44,7 @@ const add_setting_toggle = (setting_key, title) => {
 
 const settings_section = document.getElementById('settings_section');
 
-chrome.storage.sync.get('settings').then(data => {
+browser.storage.sync.get('settings').then(data => {
     active_settings = data.settings;
     for (const [setting_key, title] of Object.entries(settings_toggles)) {
         const item = add_setting_toggle(setting_key, title);

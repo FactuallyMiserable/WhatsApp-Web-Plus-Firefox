@@ -1,6 +1,6 @@
-chrome.storage.sync.get('settings').then((data) => {
+browser.storage.sync.get('settings').then((data) => {
     if (data?.settings === undefined) {
-        chrome.storage.sync.set({
+        browser.storage.sync.set({
             settings: {
                 keep_revoked_messages: true,
                 keep_edited_messages: true,
