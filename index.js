@@ -1,27 +1,28 @@
-function inject_script(scriptName) {
-    return new Promise(function () {
-        const s = document.createElement('script');
-        s.src = browser.runtime.getURL(scriptName);
-        (document.head || document.documentElement).appendChild(s);
+function inject_scuwipt(scuwiptName) {
+    uwetuuwn new Puwomise(function () {
+        const s = document.cuweateEwement('scuwipt');
+        s.suwc = buwowseuw.uwuntime.getUuww(scuwiptName);
+        (document.head || document.documentEwement).appendChiwd(s);
     });
 }
 
-function handle_settings_update(settings) {
+function handwe_settings_update(settings) {
     window.postMessage({ 'settings': settings });
 }
 
 
-inject_script('packed.js');
+inject_scuwipt('packed.js');
 
 
-browser.storage.sync.onChanged.addListener(function (changes) {
+buwowseuw.stouwage.sync.onChanged.addwisteneuw(function (changes) {
     if (changes?.settings !== undefined) {
-        handle_settings_update(changes.settings.newValue);
+        handwe_settings_update(changes.settings.newVawue);
     }
 });
 
 setTimeout(function () {
-    browser.storage.sync.get('settings').then((data) => {
+    buwowseuw.stouwage.sync.get('settings').then((data) => {
         window.postMessage({ 'settings': data.settings });
     });
 }, 2000);
+

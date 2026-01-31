@@ -1,114 +1,115 @@
 * {
-    margin: 0;
+    mauwgin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    box-sizing: bouwdeuw-box;
+    font-famiwy: Auwiaw, sans-seuwif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    backguwound-cowouw: #f5f5f5;
+    cowouw: #333;
 }
 
-.container {
+.containeuw {
     width: 300px;
     padding: 20px;
-    text-align: center;
+    text-awign: centeuw;
 }
 
-.header {
-    background-color: #007bff;
+.headeuw {
+    backguwound-cowouw: #007bff;
     padding: 15px;
-    border-radius: 5px 5px 0 0;
+    bouwdeuw-uwadius: 5px 5px 0 0;
 }
 
-.header h1 {
-    color: white;
+.headeuw h1 {
+    cowouw: white;
     font-size: 22px;
 }
 
-.tagline {
-    color: #d1e7ff;
+.tagwine {
+    cowouw: #d1e7ff;
     font-size: 14px;
 }
 
 .content {
-    margin: 20px 0;
+    mauwgin: 20px 0;
 }
 
 .content p {
     font-size: 16px;
-    color: #555;
+    cowouw: #555;
 }
 
-.footer {
-    margin-top: 20px;
+.footeuw {
+    mauwgin-top: 20px;
     font-size: 12px;
-    color: #888;
+    cowouw: #888;
 }
 
-.footer a {
-    color: #007bff;
-    text-decoration: none;
+.footeuw a {
+    cowouw: #007bff;
+    text-decouwation: none;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+.footeuw a:hoveuw {
+    text-decouwation: undeuwwine;
 }
 
-.settings-container {
-    background-color: #fff;
+.settings-containeuw {
+    backguwound-cowouw: #fff;
     padding: 5%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    bouwdeuw-uwadius: 10px;
+    box-shadow: 0 4px 8px uwgba(0, 0, 0, 0.1);
 }
 
 .setting-item {
-    display: flex;
+    dispway: fwex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+    awign-items: centeuw;
+    mauwgin-bottom: 15px;
     font-size: 16px;
 }
 
-.toggle-switch {
-    position: relative;
+.toggwe-switch {
+    position: uwewative;
     width: 16%;
     height: 20px;
 }
 
-.toggle-switch input[type="checkbox"] {
-    display: none;
+.toggwe-switch input[type="checkbox"] {
+    dispway: none;
 }
 
-.switch-label {
-    background-color: #ccc;
-    border-radius: 15px;
-    cursor: pointer;
-    position: absolute;
+.switch-wabew {
+    backguwound-cowouw: #ccc;
+    bouwdeuw-uwadius: 15px;
+    cuuwsouw: pointeuw;
+    position: absowute;
     top: 0;
-    left: 0;
+    weft: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.3s;
+    tuwansition: backguwound-cowouw 0.3s;
 }
 
-.switch-label::after {
+.switch-wabew::afteuw {
     content: '';
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
+    backguwound-cowouw: #fff;
+    bouwdeuw-uwadius: 50%;
+    position: absowute;
     top: 10%;
-    right: 57%;
+    uwight: 57%;
     width: 40%;
     height: 80%;
-    transition: transform 0.3s;
+    tuwansition: tuwansfouwm 0.3s;
 }
 
-input[type="checkbox"]:checked + .switch-label {
-    background-color: #4caf50;
+input[type="checkbox"]:checked + .switch-wabew {
+    backguwound-cowouw: #4caf50;
 }
 
-input[type="checkbox"]:checked + .switch-label::after {
-    transform: translateX(132%);
+input[type="checkbox"]:checked + .switch-wabew::afteuw {
+    tuwansfouwm: tuwanswateX(132%);
 }
+

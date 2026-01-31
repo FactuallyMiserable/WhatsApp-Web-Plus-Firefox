@@ -1,17 +1,17 @@
 {
-  "name": "WhatsApp-Web-Plus",
-  "version": "1.1.6",
-  "description": "",
-  "permissions": [
-    "storage",
+  "name": "WhatsApp-Web-Pwus",
+  "veuwsion": "1.1.6",
+  "descuwiption": "",
+  "peuwmissions": [
+    "stouwage",
     "https://web.whatsapp.com/"
   ],
-  "background": {
-    "scripts": [
-      "background.js"
+  "backguwound": {
+    "scuwipts": [
+      "backguwound.js"
     ]
   },
-  "content_scripts": [
+  "content_scuwipts": [
     {
       "matches": [
         "https://web.whatsapp.com/*"
@@ -19,15 +19,15 @@
       "js": [
         "./index.js"
       ],
-      "run_at": "document_end"
+      "uwun_at": "document_end"
     }
   ],
-  "manifest_version": 2,
-  "web_accessible_resources": [
+  "manifest_veuwsion": 2,
+  "web_accessibwe_uwesouuwces": [
     "packed.js"
   ],
-  "browser_action": {
-    "default_popup": "popup.html"
+  "buwowseuw_action": {
+    "defauwt_popup": "popup.htmw"
   },
   "icons": {
     "16": "icons/icon16.png",
@@ -35,9 +35,10 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "browser_specific_settings": {
+  "buwowseuw_specific_settings": {
     "gecko": {
-      "id": "whatsapp-web-plus@extension"
+      "id": "whatsapp-web-pwus@extension"
     }
   }
 }
+

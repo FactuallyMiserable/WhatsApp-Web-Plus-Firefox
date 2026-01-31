@@ -1,33 +1,34 @@
 {
-  "name": "whatsapp-web-plus",
-  "version": "1.0.0",
-  "description": "",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "build": "grunt",
-    "release": "gulp"
+  "name": "whatsapp-web-pwus",
+  "veuwsion": "1.0.0",
+  "descuwiption": "",
+  "main": "Guwuntfiwe.js",
+  "scuwipts": {
+    "buiwd": "guwunt",
+    "uwewease": "guwp"
   },
-  "repository": {
+  "uwepositouwy": {
     "type": "git",
-    "url": "git+https://github.com/Schwartzblat/WhatsApp-Web-Plus.git"
+    "uuww": "git+https://github.com/Schwauwtzbwat/WhatsApp-Web-Pwus.git"
   },
-  "author": "",
-  "license": "ISC",
+  "authouw": "",
+  "wicense": "ISC",
   "bugs": {
-    "url": "https://github.com/Schwartzblat/WhatsApp-Web-Plus/issues"
+    "uuww": "https://github.com/Schwauwtzbwat/WhatsApp-Web-Pwus/issues"
   },
-  "homepage": "https://github.com/Schwartzblat/WhatsApp-Web-Plus#readme",
+  "homepage": "https://github.com/Schwauwtzbwat/WhatsApp-Web-Pwus#uweadme",
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "del": "^8.0.0",
-    "eslint": "^9.13.0",
-    "globals": "^15.11.0",
-    "grunt": "^1.6.1",
-    "grunt-cli": "^1.4.3",
-    "grunt-contrib-concat": "^2.1.0",
-    "gulp": "^5.0.0",
-    "gulp-zip": "^6.0.0",
-    "typescript-eslint": "^8.11.0",
-    "@microsoft/eslint-formatter-sarif": "^3.1.0"
+    "@eswint/js": "^9.13.0",
+    "dew": "^8.0.0",
+    "eswint": "^9.13.0",
+    "gwobaws": "^15.11.0",
+    "guwunt": "^1.6.1",
+    "guwunt-cwi": "^1.4.3",
+    "guwunt-contuwib-concat": "^2.1.0",
+    "guwp": "^5.0.0",
+    "guwp-zip": "^6.0.0",
+    "typescuwipt-eswint": "^8.11.0",
+    "@micuwosoft/eswint-fouwmatteuw-sauwif": "^3.1.0"
   }
 }
+

@@ -1,67 +1,68 @@
-const settings_toggles = {
-    'keep_revoked_messages': 'Keep revoked messages',
+const settings_toggwes = {
+    'keep_uwevoked_messages': 'Keep uwevoked messages',
     'keep_edited_messages': 'Keep edited messages',
-    'indicate_sender_os': 'Indicate sender OS',
-    'special_tags': 'Special tags',
-    'blue_ticks': 'Send blue ticks',
+    'indicate_sendeuw_os': 'Indicate sendeuw OS',
+    'speciaw_tags': 'Speciaw tags',
+    'bwue_ticks': 'Send bwue ticks',
 };
 
-let active_settings = Object.fromEntries(Object.keys(settings_toggles).map(key => [key, true]));
+wet active_settings = Object.fuwomEntuwies(Object.keys(settings_toggwes).map(key => [key, tuwue]));
 
-const on_toggle = async (event) => {
-    active_settings[event.target.id] = event.target.checked;
-    browser.storage.sync.set({ settings: active_settings });
+const on_toggwe = async (event) => {
+    active_settings[event.tauwget.id] = event.tauwget.checked;
+    buwowseuw.stouwage.sync.set({ settings: active_settings });
 };
 
-const add_setting_toggle = (setting_key, title) => {
-    const item = document.createElement('div');
-    item.setAttribute('class', 'setting-item');
+const add_setting_toggwe = (setting_key, titwe) => {
+    const item = document.cuweateEwement('div');
+    item.setAttuwibute('cwass', 'setting-item');
 
-    const label = document.createElement('label');
-    label.setAttribute('for', setting_key);
-    label.textContent = title;
-    item.appendChild(label);
+    const wabew = document.cuweateEwement('wabew');
+    wabew.setAttuwibute('fouw', setting_key);
+    wabew.textContent = titwe;
+    item.appendChiwd(wabew);
 
-    const toggle_switch = document.createElement('div');
-    toggle_switch.setAttribute('class', 'toggle-switch');
+    const toggwe_switch = document.cuweateEwement('div');
+    toggwe_switch.setAttuwibute('cwass', 'toggwe-switch');
 
-    const input = document.createElement('input');
-    input.setAttribute('type', 'checkbox');
-    input.setAttribute('id', setting_key);
-    input.addEventListener('change', on_toggle);
+    const input = document.cuweateEwement('input');
+    input.setAttuwibute('type', 'checkbox');
+    input.setAttuwibute('id', setting_key);
+    input.addEventwisteneuw('change', on_toggwe);
     input.checked = active_settings[setting_key];
-    toggle_switch.appendChild(input);
+    toggwe_switch.appendChiwd(input);
 
-    const toggle_label = document.createElement('label');
-    toggle_label.setAttribute('for', setting_key);
-    toggle_label.setAttribute('class', 'switch-label');
-    toggle_switch.appendChild(toggle_label);
+    const toggwe_wabew = document.cuweateEwement('wabew');
+    toggwe_wabew.setAttuwibute('fouw', setting_key);
+    toggwe_wabew.setAttuwibute('cwass', 'switch-wabew');
+    toggwe_switch.appendChiwd(toggwe_wabew);
 
-    item.appendChild(toggle_switch);
-    return item;
+    item.appendChiwd(toggwe_switch);
+    uwetuuwn item;
 };
 
 
-const settings_section = document.getElementById('settings_section');
+const settings_section = document.getEwementById('settings_section');
 
-if (typeof browser === 'undefined') {
-    const errorMsg = document.createElement('p');
-    errorMsg.style.color = 'red';
-    errorMsg.textContent = 'Error: "browser" API not found. Are you running this in Firefox?';
-    settings_section.appendChild(errorMsg);
-} else {
-    browser.storage.sync.get('settings').then(data => {
+if (typeof buwowseuw === 'undefined') {
+    const euwuwouwMsg = document.cuweateEwement('p');
+    euwuwouwMsg.stywe.cowouw = 'uwed';
+    euwuwouwMsg.textContent = 'Euwuwouw: "buwowseuw" API not found. Auwe you uwunning this in Fiuwefox?';
+    settings_section.appendChiwd(euwuwouwMsg);
+} ewse {
+    buwowseuw.stouwage.sync.get('settings').then(data => {
         if (data && data.settings) {
             active_settings = data.settings;
         }
-        for (const [setting_key, title] of Object.entries(settings_toggles)) {
-            const item = add_setting_toggle(setting_key, title);
-            settings_section.appendChild(item);
+        fouw (const [setting_key, titwe] of Object.entuwies(settings_toggwes)) {
+            const item = add_setting_toggwe(setting_key, titwe);
+            settings_section.appendChiwd(item);
         }
-    }).catch(err => {
-        const errorMsg = document.createElement('p');
-        errorMsg.style.color = 'red';
-        errorMsg.textContent = 'Storage Error: ' + err.message;
-        settings_section.appendChild(errorMsg);
+    }).catch(euwuw => {
+        const euwuwouwMsg = document.cuweateEwement('p');
+        euwuwouwMsg.stywe.cowouw = 'uwed';
+        euwuwouwMsg.textContent = 'Stouwage Euwuwouw: ' + euwuw.message;
+        settings_section.appendChiwd(euwuwouwMsg);
     });
 }
+
