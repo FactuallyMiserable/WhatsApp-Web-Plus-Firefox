@@ -44,10 +44,24 @@ const add_setting_toggle = (setting_key, title) => {
 
 const settings_section = document.getElementById('settings_section');
 
-browser.storage.sync.get('settings').then(data => {
-    active_settings = data.settings;
-    for (const [setting_key, title] of Object.entries(settings_toggles)) {
-        const item = add_setting_toggle(setting_key, title);
-        settings_section.appendChild(item);
-    }
-});
+if (typeof browser === 'undefined') {
+    const errorMsg = document.createElement('p');
+    errorMsg.style.color = 'red';
+    errorMsg.textContent = 'Error: "browser" API not found. Are you running this in Firefox?';
+    settings_section.appendChild(errorMsg);
+} else {
+    browser.storage.sync.get('settings').then(data => {
+        if (data && data.settings) {
+            active_settings = data.settings;
+        }
+        for (const [setting_key, title] of Object.entries(settings_toggles)) {
+            const item = add_setting_toggle(setting_key, title);
+            settings_section.appendChild(item);
+        }
+    }).catch(err => {
+        const errorMsg = document.createElement('p');
+        errorMsg.style.color = 'red';
+        errorMsg.textContent = 'Storage Error: ' + err.message;
+        settings_section.appendChild(errorMsg);
+    });
+}
